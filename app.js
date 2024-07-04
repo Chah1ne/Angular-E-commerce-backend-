@@ -9,6 +9,16 @@ const articleRouter =require("./routes/article.route");
 const userRouter =require("./routes/user.route");
 
 
+
+
+// Configuration CORS
+const corsOptions = {
+    origin: 'https://your-angular-frontend-url.vercel.app',  // Remplacez par l'URL de votre frontend Angular sur Vercel
+    optionsSuccessStatus: 200
+  };
+  app.use(cors(corsOptions));
+
+  
 dotenv.config()
 const app = express();
 const paymentRouter =require("./routes/payment.route.js");
